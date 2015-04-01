@@ -1,5 +1,5 @@
-//ÎÄ¼şÃû£º×÷ÒµÒ»__ÓÎÏ·
-//²ÂÊı×ÖÓÎÏ·
+//æ–‡ä»¶åï¼šä½œä¸šä¸€__æ¸¸æˆ
+//çŒœæ•°å­—æ¸¸æˆ
 #include<cstdlib>
 #include<ctime>
 #include<iostream>
@@ -15,7 +15,7 @@ int main()
 	winnum=0 ;
 	
 	while (true) {
-		cout<<"ĞèÒªÍæÓÎÏ·Âğ£¨Y/N£©£¿" ;
+		cout<<"éœ€è¦ç©æ¸¸æˆå—ï¼ˆY/Nï¼‰ï¼Ÿ" ;
 		cin>>answer ;
 		
 		if (answer=='N') break ;                         //game over.
@@ -36,19 +36,19 @@ int main()
 				numB=0;
 		
 				if(i==7) {
-					cout<<"ºÜÒÅº¶£¬ÄãÃ»ÓĞÔÚ¹æ¶¨´ÎÊıÄÚ²Â¶Ô¡£´ğ°¸ÊÇ"<<num1<<num2<<num3<<endl ;
+					cout<<"å¾ˆé—æ†¾ï¼Œä½ æ²¡æœ‰åœ¨è§„å®šæ¬¡æ•°å†…çŒœå¯¹ã€‚ç­”æ¡ˆæ˜¯"<<num1<<num2<<num3<<endl ;
 					break; 
 				}     
 				
 				char input1,input2,input3;
-				cout<<"ÇëÊäÈëÄã²Â²âµÄÊı×Ö:" ;
+				cout<<"è¯·è¾“å…¥ä½ çŒœæµ‹çš„æ•°å­—:" ;
 						cin>>input1;
 						cin>>input2;
 						cin>>input3;
 				
 				while (true){        //confirm the inputted numbers are between 0~9.
 	 				if (input1<'0'||input1>'9'||input2<'0'||input2>'9'||input3<'0'||input3>'9'){
-	 					cout<<"ÇëÊäÄã²Â²âµÄ·¶Î§ÔÚ0-9µÄÊı×Ö:" ;
+	 					cout<<"è¯·è¾“ä½ çŒœæµ‹çš„èŒƒå›´åœ¨0-9çš„æ•°å­—:" ;
 						cin>>input1;
 						cin>>input2;
 						cin>>input3;
@@ -56,13 +56,13 @@ int main()
 		 			else break;
 	 			}
 	  			
-	  			result1=static_cast<int>(input1)-48; //change the characters into integers.
-	  			result2=static_cast<int>(input2)-48;
-	  			result3=static_cast<int>(input3)-48;
+	  			result1=static_cast<int>(input1)-'0'; //change the characters into integers.
+	  			result2=static_cast<int>(input2)-'0';
+	  			result3=static_cast<int>(input3)-'0';
 	  		
 				if ((num1==result1)&&(num2==result2)&&(num3==result3))
 					{
-						cout<<"¹§Ï²£¬Äã²Â¶ÔÁË" ;        //win the game.
+						cout<<"æ­å–œï¼Œä½ çŒœå¯¹äº†" ;        //win the game.
 						++winnum ;
 						break ;
 				    }
@@ -79,7 +79,7 @@ int main()
 		++totalnum ;                                           //the times of the game.
 		
 	}
-	cout<<"ÄãÒ»¹²ÍæÁË"<<totalnum<<"¾Ö£¬Ó®ÁË"<<winnum<<"¾Ö£¬ÊäÁË"<<totalnum-winnum<<"¾Ö" ;
+	cout<<"ä½ ä¸€å…±ç©äº†"<<totalnum<<"å±€ï¼Œèµ¢äº†"<<winnum<<"å±€ï¼Œè¾“äº†"<<totalnum-winnum<<"å±€" ;
 	
 	return 0 ;
 }
